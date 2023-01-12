@@ -1,0 +1,441 @@
+# Query: prefix
+# ContextLines: 1
+
+195 results - 36 files
+
+config.js:
+   5      "ownerID": ["852219497763045398"],
+   6: "prefix": "--",
+   7  "chat": {
+
+  16  "youtubeAPI": "AIzaSyAAg3GHxipuyDz7KsCAv434yoFT56TR9LQ",
+  17: mainprefix: "..",
+  18  "owner": "Nangyal",
+
+xp.js:
+  25   client.util = require('./utils/chat-bot-main.js');
+  26: const { mainprefix, token, color } = require("./config.js");
+  27  const yaml = require("js-yaml");
+
+commands\economy\addmoney.js:
+   8    execute: async(client, message, args) => {
+   9:       var prefix =  db.fetch(`guildprefix_${message.guild.id}`);
+  10:     if(!prefix)
+  11      {
+  12:       var prefix = "..";
+  13      }
+
+commands\economy\buy.js:
+    8    execute: async(client, message, args) => {
+    9:  var prefix =  db.fetch(`guildprefix_${message.guild.id}`);
+   10:     if(!prefix)
+   11      {
+   12:       var prefix = "..";
+   13      }
+
+  110          .setColor("FF5757")
+  111:         .setTitle(`Enter an item to buy, type ${prefix}buy list to show all things`)
+  112          message.channel.send(embed3)
+
+commands\music\24-7.js:
+   7  
+   8:  var prefix =  db.fetch(`guildprefix_${message.guild.id}`);
+   9:     if(!prefix)
+  10      {
+  11:       var prefix = "..";
+  12      }
+  13  
+  14:  var prefix1 =  db.fetch(`two_${message.guild.id}`);
+  15   
+
+  18    
+  19:   if(prefix1 === "yes")
+  20    {
+
+commands\music\join.js:
+  7      if (!channel) return message.channel.send('You should join a voice channel before using this command!');
+  8:       var prefix =  db.fetch(`two_${message.guild.id}`);
+  9:     if(prefix === "yes")
+  10      {
+
+commands\music\play.js:
+   75          const queue = message.client.queue.get(message.guild.id);
+   76:             var prefix =  db.fetch(`two_${message.guild.id}`);
+   77:     if(prefix === "yes")
+   78      {
+
+   91        {
+   92:           var prefix1 =  db.fetch(`guildprefix_${message.guild.id}`);
+   93:     if(!prefix1)
+   94      {
+   95:       var prefix1 = "..";
+   96      }
+
+  102              message.client.queue.delete(message.guild.id);
+  103:             message.channel.send(`There are no songs in queue, I\'m leaving the voice channel! You turn this off by doing ${prefix1}24/7`)
+  104              return;
+
+commands\music\stop.js:
+  19      
+  20:             var prefix =  db.fetch(`two_${message.guild.id}`);
+  21:     if(prefix === "yes")
+  22      {
+
+  33        {
+  34:           var prefix1 =  db.fetch(`guildprefix_${message.guild.id}`);
+  35:     if(!prefix1)
+  36      {
+  37:       var prefix1 = "..";
+  38      }
+
+  41              message.client.queue.delete(message.guild.id);
+  42:             message.channel.send(`There are no songs in queue, I\'m leaving the voice channel! You turn this off by doing ${prefix1}24/7`)
+  43              return;
+
+commands\owners\reload.js:
+   7      description: "Reloades the provided command !!",
+   8:     example: `${config.Prefix}reload Fun pp`,
+   9  
+
+  16          if(!args[0]) return message.reply(`Provide the category & commands to reload !! \`reload [Category] [Command] okkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk?????????\``)
+  17:         if(!args[1]) return message.reply(`Provide a command to reload \`${config.Prefix}reload [Category] [Command]\``)
+  18  
+
+commands\ℹ Bot Code Info\stats.js:
+  11  
+  12:      var prefix =  db.fetch(`guildprefix_${message.guild.id}`);
+  13:     if(!prefix)
+  14      {
+  15:       var prefix = "..";
+  16      }
+
+  40        .addField(`:tools: Developers of This Bot -`, `Npg`, false)
+  41:       .addField(`⚙➡Prefix : `, `${prefix}`, false)
+  42        .addField(`:chart_with_upwards_trend:Uptime:`, uptime.join(", "), false)
+
+commands\ℹ️ General Info\help.js:
+   10  
+   11:     var prefix = db.fetch(`guildprefix_${message.guild.id}`);
+   12:     if (!prefix) {
+   13:       var prefix = "..";
+   14      }
+
+   54        const embed = new MessageEmbed()
+   55:         .setTitle(`📬 Need help? Here are all of my commands:\n Use \`${prefix}help\` followed by a command name to get more additional information on a command. For example: \`${prefix}help ban\`.`)
+   56  
+
+   93          const embed = new MessageEmbed()
+   94:           .setTitle(`Invalid command! Use \`${prefix}help\` for all of my commands! (Some Commands will show on help And they are working just Command is disabled in detaied help command)`)
+   95            .setColor("FF0000");
+
+  100          .setTitle("Command Details:")
+  101:         .addField("PREFIX:", `\`${prefix}\``)
+  102          .addField(
+
+  114            command.usage
+  115:             ? `\`${prefix}${command.name} ${command.help.usage}}\``
+  116:             : `\`${prefix}${command.name}\``
+  117          )
+
+commands\ℹ️ General Info\serverstats.js:
+  4  const yaml = require("js-yaml");
+  5: const { mainprefix, color } = require("../../config.js")
+  6  
+
+commands\🎎AutoMod\antilink.js:
+  17    
+  18:     var prefix =  db.fetch(`guildprefix_${message.guild.id}`);
+  19:     if(!prefix)
+  20      {
+  21:       var prefix = "..";
+  22      }
+
+  24      {
+  25:       message.channel.send(`You didnt gave me an on or off option e.g - ${prefix}antilink on/off`);
+  26        return;
+
+commands\🎫 Ticket\add.js:
+   5    execute: async(client, message, args) => {
+   6:     var prefix =  db.fetch(`guildprefix_${message.guild.id}`);
+   7:     if(!prefix)
+   8      {
+   9:       var prefix = "..";
+  10      }
+
+  16  			if(!member) {
+  17: 				return message.channel.send(`Incorrect Usage! Correct Usage:${prefix}add <member>`);
+  18  			}
+
+commands\🎫 Ticket\close.js:
+   7    execute: async(client, message, args) => {
+   8:     var prefix =  db.fetch(`guildprefix_${message.guild.id}`);
+   9:     if(!prefix)
+  10      {
+  11:       var prefix = "..";
+  12      }
+
+commands\🎫 Ticket\delete.js:
+  10       }
+  11:     var prefix =  db.fetch(`guildprefix_${message.guild.id}`);
+  12:     if(!prefix)
+  13      {
+  14:       var prefix = "..";
+  15      }
+
+commands\🎫 Ticket\new.js:
+  17      }
+  18:     var prefix =  db.fetch(`guildprefix_${message.guild.id}`);
+  19:     if(!prefix)
+  20      {
+  21:       var prefix = "..";
+  22      }
+
+  54  			message.reply(`<:tick_yes:866150426738425856> | You have successfully created a ticket! Please click on ${channel} to view your ticket.`);
+  55: 			channel.send(`Hi ${message.author}, welcome to your ticket! Please be patient, we will be with you shortly. If you would like to close this ticket please run \`${prefix}close\``);
+  56  			let logchannel = message.guild.channels.cache.find(channel => channel.name === `ticket-logs`)
+
+commands\🎫 Ticket\open.js:
+   7    execute: async(client, message, args) => {
+   8:     var prefix =  db.fetch(`guildprefix_${message.guild.id}`);
+   9:     if(!prefix)
+  10      {
+  11:       var prefix = "..";
+  12      }
+
+commands\🎫 Ticket\remove.js:
+  10       }
+  11:     var prefix =  db.fetch(`guildprefix_${message.guild.id}`);
+  12:     if(!prefix)
+  13      {
+  14:       var prefix = "..";
+  15      }
+
+  19  			if(!member) {
+  20: 				return message.channel.send(`<a:no:876439250965508146> | Incorrect Usage! Correct Usage:${prefix}remove <member>`);
+  21  			}
+
+commands\🎭Reaction Roles\create.js:
+  11      {
+  12:       return message.reply("You Didnt Give me an emoji Here is order to do - ${prefix}rr 🎉 6969696969 @Giveaway-Ping/69696969\n So First is Emoji to add\n Second is Message-id to add\n Third is Role To Ping or Enter Role ID");
+  13      }
+
+commands\🔒 Logs\logs-ticket.js:
+   7    execute: async(client, message, args, data, db) => {
+   8:     var prefix =  db.fetch(`guildprefix_${message.guild.id}`);
+   9:     if(!prefix)
+  10      {
+  11:       var prefix = "..";
+  12      }
+
+commands\🖼️ IMAGE\meme.js:
+  34                  var link = 'https://reddit.com' + index.permalink
+  35:                 var subRedditName = index.subreddit_name_prefixed
+  36  
+
+commands\🛠️ Moderation\announcement.js:
+  18           const taggedChannel = await message.mentions.channels.first();
+  19:          var prefix2 = db.fetch(`guildprefix_${message.guild.id}`);
+  20:          if(!prefix2)
+  21           {
+  22:            var prefix2 = "..";
+  23           }
+
+  29              await taggedChannel.send(embed1);
+  30:              message.channel.send(`btw you can change the embed color by ${prefix2}embed <any_color> like RED BLUE AND ETC`) .then(message => {
+  31              message.delete({ timeout: 10000 })
+
+  35          {
+  36:         var prefix1 = db.fetch(`guildprefix_${message.guild.id}`);
+  37        let colour = db.fetch(`embed_${message.guild.id}`);
+
+commands\🛠️ Moderation\embed.js:
+  5  const {
+  6:   mainprefix,
+  7    defaultjoinmessage,
+
+commands\🛠️ Moderation\hide.js:
+  18    
+  19:     var prefix =  db.fetch(`guildprefix_${message.guild.id}`);
+  20:     if(!prefix)
+  21      {
+  22:       var prefix = "..";
+  23      }
+
+commands\🛠️ Moderation\maintainenece.js:
+  10      }
+  11:        var prefix =  db.fetch(`guildprefix_${message.guild.id}`);
+  12:     if(!prefix)
+  13      {
+  14:       var prefix = "..";
+  15      }
+
+  17      {
+  18:       message.channel.send(`You didnt give me ${prefix}maintainenece on/off PLease Give SO i can Understand what to do!!`)
+  19      }
+
+commands\🛠️ Moderation\sendembed.js:
+  17           const taggedChannel = await message.mentions.channels.first();
+  18:          var prefix2 = db.fetch(`guildprefix_${message.guild.id}`);
+  19:          if(!prefix2)
+  20           {
+  21:            var prefix2 = "..";
+  22           }
+
+  28              await taggedChannel.send(embed1);
+  29:              message.channel.send(`btw you can change the embed color by ${prefix2}embed <any_color> like RED BLUE AND ETC`) .then(message => {
+  30              message.delete({ timeout: 10000 })
+
+  34          {
+  35:         var prefix1 = db.fetch(`guildprefix_${message.guild.id}`);
+  36        let colour = db.fetch(`embed_${message.guild.id}`);
+
+  40          message.channel.send(embed)
+  41:         message.channel.send(`btw you can change the embed color by ${prefix1}embed <any_color> like RED BLUE AND ETC`) .then(message => {
+  42              message.delete({ timeout: 10000 })
+
+commands\🛠️ Moderation\serverlock.js:
+  17    
+  18:     var prefix =  db.fetch(`guildprefix_${message.guild.id}`);
+  19:     if(!prefix)
+  20      {
+  21:       var prefix = "..";
+  22      }
+
+  24      {
+  25:       message.channel.send(`You didnt gave me an text or vc option e.g - ${prefix}serverlock text/vc/all/hide`);
+  26        return;
+
+commands\🛠️ Moderation\serverunlock.js:
+  18    
+  19:     var prefix =  db.fetch(`guildprefix_${message.guild.id}`);
+  20:     if(!prefix)
+  21      {
+  22:       var prefix = "..";
+  23      }
+
+  25      {
+  26:       message.channel.send(`You didnt gave me an text or vc option e.g - ${prefix}serverunlock text/vc/all`);
+  27        return;
+
+commands\🛠️ Moderation\set.js:
+   4  const Discord = require("discord.js");
+   5: const { mainprefix, defaultjoinmessage, defaultleavemessage, color } = require("../../config.js");
+   6  
+
+   8    name: "set",
+   9:   aliases: ["prefix", "set-prefix", "prefix-set"],
+  10    execute: async(client, message, args) => {
+
+  16      let content = args[0];
+  17:     let prefix = await db.get(`guildprefix_${message.guild.id}`);
+  18:     if (prefix === null) prefix = mainprefix;
+  19  
+
+  21      
+  22:       let newprefix = args[0];
+  23  
+  24:       if (!newprefix) {
+  25:         return message.channel.send(prefixembed);
+  26        }
+  27:       let changedprefix = new Discord.MessageEmbed()
+  28:         .setTitle(`**Prefix Updated**`)
+  29               .setColor(`${embed || color}`)
+  30          .setDescription(
+  31:           `** Old Value **\n${prefix}\n** New Value **\n${newprefix}`
+  32          )
+  33          .setFooter(message.guild.name, client.user.displayAvatarURL());
+  34:       db.delete(`guildprefix_${message.guild.id}`);
+  35:       db.set(`guildprefix_${message.guild.id}`, newprefix);
+  36:       return message.channel.send(changedprefix);
+  37      
+
+commands\🛠️ Moderation\unhide.js:
+  17    
+  18:     var prefix =  db.fetch(`guildprefix_${message.guild.id}`);
+  19:     if(!prefix)
+  20      {
+  21:       var prefix = "..";
+  22      }
+
+commands\🛠️ Moderation\voicemove.js:
+   5     
+   6:    var prefix = db.fetch(`guildprefix_${message.guild.id}`);
+   7:    if(!prefix)
+   8     {
+   9:      var prefix = "..";
+  10     }
+
+  17      {
+  18:       message.channel.send("You didnt gave me vc developer id do join the voice channel you wanna drag and do $prefix}vcid after it")
+  19      }
+
+events\message.js:
+   17  
+   18:      var prefix = db.fetch(`guildprefix_${message.guild.id}`);
+   19:    if(!prefix)
+   20     {
+   21:      var prefix = client.config.prefix;
+   22     
+
+   51  
+   52:   const args = message.content.slice(prefix.length).trim().split(/ +/g);
+   53   let name = message.content.toLowerCase();
+
+   70             if(user.id == client.user.id){
+   71:              message.channel.send(`My Prefix for This Server is ${prefix}`)
+   72             }
+
+  158         let data = await get(message, message.guild) 
+  159:        if (message.content.indexOf(prefix) !== 0) return;
+  160      if(!command) command = client.commands.get(client.aliases.get(cmd));
+
+lang\en.js:
+  49  
+  50:       start: (message) => `**${config.prefix}start**`,
+  51:       startdescription: (message) => `This command is used to launch a giveaway.\nUsage \`${config.prefix}start <#salon> <time> <winners> <lot>\`.`,
+  52  
+  53:       end: (message) => `**${config.prefix}end**`,
+  54:       enddescription: (message) => `This command is used to delete a giveaway.\nUsage \`${config.prefix}end <ID giveaway>\`.`,
+  55  
+  56:       reroll: (message) => `**${config.prefix}reroll**`,
+  57:       rerolldescription: (message) => `This command is used to restart a giveaway.\nUsage \`${config.prefix}reroll <ID giveaway>\`.`,
+  58  
+  59:       edit: (message) => `**${config.prefix}edit**`,
+  60:       editdescription: (message) => `This command is used to modify a giveaway.\nUsage \`${config.prefix}edit <ID giveaway> <winners> <new lot>\`.`,
+  61  
+  62:       lang: (message) => `**${config.prefix}lang**`,
+  63:       langdescription: (message) => `This command is used to change the language of the bot.\nUsage \`${config.prefix}lang <fr/en>\`.`,
+  64  
+  65:       set: (message) => `**${config.prefix}set**`,
+  66:       setdescription: (message) => `This command is used to modify the bot's configurations.\nUsage \`${config.prefix}set <mention/logs/role>\`.`,
+  67      
+  68:       invite: (message) => `**${config.prefix}invite**`,
+  69:       invitedescription: (message) => `This command is used to get the bot's invitation link.\nUsage \`${config.prefix}invite\`.`
+  70      },
+
+utils\slash-commands.js:
+  451        .addField(`:tools: Developers of This Bot -`, `Dhvit And E-E-3`, false)
+  452:       .addField(`⚙➡Prefix : `, `..`, false)
+  453        .addField(`:chart_with_upwards_trend:Uptime:`, duration, false)
+
+utils\words.json:
+  310057    "prefires",
+  310058:   "prefix",
+  310059:   "prefixable",
+  310060:   "prefixal",
+  310061:   "prefixally",
+  310062:   "prefixation",
+  310063:   "prefixed",
+  310064:   "prefixedly",
+  310065:   "prefixes",
+  310066:   "prefixing",
+  310067:   "prefixion",
+  310068:   "prefixions",
+  310069:   "prefixture",
+  310070    "preflagellate",
+
+  437209    "unprefined",
+  437210:   "unprefixal",
+  437211:   "unprefixally",
+  437212:   "unprefixed",
+  437213    "unpregnable",
